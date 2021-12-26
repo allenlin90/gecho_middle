@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
 app.get('/gecko/coins', async (req, res) => {
   // let data = await CoinGeckoClient.coins.all();
   let data = await CoinGeckoClient.coins.markets();
+  console.log(data);
   res.json(data);
 });
 
