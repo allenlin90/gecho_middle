@@ -14,7 +14,7 @@ app.get('/gecko/coins', async (req, res) => {
   res.json(data);
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, (err) => {
   if (err) console.log(err);
   console.log(`server starts on port ${PORT}`);
